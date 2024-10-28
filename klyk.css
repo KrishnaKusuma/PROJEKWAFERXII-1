@@ -1,0 +1,171 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+nav {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+
+
+nav div img {
+    width: 150px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #191919;
+    font-weight: 600;
+    padding: 8px 0;
+    transition: all;
+    transition-duration: .3s;
+    border-bottom: 1px solid rgba(38, 126, 173, 0)(0, 0, 0, 0) ;
+}
+
+
+nav ul li a:hover {
+    color: rgb(38, 126, 173);
+    border-bottom: 1px solid rgb(38, 126, 173);
+}
+
+
+.menu-icon {
+    font-size: 25px;
+    display: none;
+}
+
+main {
+    padding: 4rem;
+    max-width: 950px;
+    margin: 3rem auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 1.125rem; /* Meningkatkan ukuran font di seluruh konten utama */
+    line-height: 1.75; /* Menambah spasi antara baris teks untuk kenyamanan membaca */
+}
+
+.content-section {
+    margin-bottom: 2.5rem;
+}
+
+.content-section h1 {
+    color: #007BFF;
+    margin-bottom: 1rem;
+    font-size: 2.5rem; /* Membesarkan judul utama */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.content-section p {
+    line-height: 1.8;
+    text-align: justify;
+    font-size: 1.2rem; /* Membesarkan teks paragraf */
+    padding-right: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.water-img {
+    width: 100%; /* Mengubah ukuran gambar agar lebih responsif */
+    max-width: 400px;
+    border-radius: 8px; 
+    margin: 20px auto;
+    display: block; /* Agar gambar berada di tengah */
+}
+
+.content-section-2 {
+    margin-top: 2.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.content-section-2 h2 {
+    color: #007BFF;
+    font-size: 2rem; /* Membesarkan ukuran heading section */
+    margin-bottom: 1.5rem;
+}
+
+.content-section-2 h3 {
+    color: #007BFF;
+    font-size: 2rem; /* Membesarkan ukuran heading section */
+    margin-bottom: 1.5rem;
+}
+
+
+.content-section-2 ul, 
+.content-section-2 ol {
+    text-align: justify;
+    font-size: 1.2rem; /* Membesarkan teks dalam list */
+    line-height: 1.75;
+    margin-left: 1.5rem; /* Menambah ruang antara item dalam list */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.content-section-2 ul li, 
+.content-section-2 ol li {
+    margin-bottom: 0.75rem; /* Menambah jarak antara list item */
+    font-size: 1.2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.content-section-2 img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Menengahkan gambar */
+}
+.content-section-2 p {
+    font-size: 1.2rem;
+    line-height: 1.75; /* Menambah spasi antar paragraf */
+}
+
+footer {
+    padding: 25px 0;
+    background-color: #343a40;
+    color: white; 
+    text-align: center;
+    margin-top: 3.5rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media only screen and (max-width : 768px) {
+    nav {
+        flex-wrap: wrap;
+        position: relative;
+        width: 100%;
+        top: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul.hidden {
+        display: none;
+    }
+
+    .menu-icon {
+        display: flex;
+        align-items: center;
+    }
+}

@@ -1,0 +1,161 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f400;
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.13);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+
+nav div img {
+    width: 150px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #191919;
+    font-weight: 600;
+    padding: 8px 0;
+    transition: all;
+    transition-duration: .3s;
+    border-bottom: 1px solid rgba(38, 126, 173, 0)(0, 0, 0, 0) ;
+    
+}
+
+
+nav ul li a:hover {
+    color: rgb(38, 126, 173); /* Ubah warna saat hover */
+    border-bottom: 1px solid rgb(38, 126, 173); /* Garis bawah muncul saat hover */
+    transform: translateY(-5px); /* Tulisan naik sedikit */
+    transition: transform 0.3s, color 0.3s; /* Haluskan animasi */
+}
+
+.menu-icon {
+    /* background-color: tomato; */
+    font-size: 25px;
+    display: none;
+    
+}
+
+main {
+    padding-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+}
+
+.banner {
+    height: 80vh;
+    background-image: url(https://wallpapercave.com/wp/qYeaEQC.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner:after {
+    content:" ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(120, 155, 164, 0.393);
+}
+
+.banner h2 {
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    padding: 20px 25px;
+    border: 3px solid white;
+}
+
+section {
+    padding: 30px 0; /* Kurangi padding untuk mengurangi jarak */
+}
+
+section h3 {
+    text-align: center;
+    margin: 1px 1px;
+    padding: 1px 0;
+    color: #191919;
+    /* border: solid black; */
+}
+
+.about {
+    padding: 20px 0; /* Kurangi padding khusus untuk about */
+}
+
+.about p {
+    color: #191919;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; 
+    gap: 15px; 
+    margin-top: 20px; 
+}
+
+footer {
+    padding: 20px 0;
+    margin-top: 1rem; /* Kurangi jarak di atas footer */
+    background-color: #343a40; /* Dark gray footer */
+    color: white; 
+    text-align: center;
+    margin-top: 3rem; /* Add space before footer */
+}
+
+
+@media only screen and (max-width : 768px) {
+    nav {
+        flex-wrap: wrap;
+        position: relative;
+        width: 100%;
+        top: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul.hidden {
+        display: none;
+    }
+
+    .menu-icon {
+        display: flex;
+        align-items: center;
+    }
+    
+}

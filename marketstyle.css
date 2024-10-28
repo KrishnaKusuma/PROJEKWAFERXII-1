@@ -1,0 +1,210 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f46c;
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.13);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+
+nav div img {
+    width: 150px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #191919;
+    font-weight: 600;
+    padding: 8px 0;
+    transition: all;
+    transition-duration: .3s;
+    border-bottom: 1px solid rgba(38, 126, 173, 0)(0, 0, 0, 0) ;
+}
+
+
+nav ul li a:hover {
+    color: rgb(38, 126, 173);
+    border-bottom: 1px solid rgb(38, 126, 173);
+}
+
+.menu-icon {
+    font-size: 25px;
+    display: none;
+    
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: url('https://png.pngtree.com/thumb_back/fw800/background/20230616/pngtree-laptop-and-shopping-cart-in-3d-render-image_3637764.jpg') no-repeat center center/cover;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+.content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    padding: 10px;
+    border: 3px solid white;
+}
+
+.judul {
+    background-color: #191a1a;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    text-align: center;
+    justify-content: center;
+}
+
+.content p {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+}
+
+.media-scroller {
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 15%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: x mandatory;
+    padding: 1rem;
+    background-color: #191a1a;
+
+    /* Tambahkan berikut untuk menyembunyikan scrollbar */
+    scrollbar-width: none; /* Untuk Firefox */
+    -ms-overflow-style: none; /* Untuk IE dan Edge */
+}
+
+.media-scroller::-webkit-scrollbar {
+    display: none; /* Untuk Chrome, Safari, dan Opera */
+}
+
+.media-element {
+    padding: 0.5rem;
+    background-color: #f9f9f9; 
+    text-align: center; 
+    scroll-snap-align: start; 
+    background-color: #343a40;
+}
+
+.media-element img {
+    inline-size: 100%;
+    aspect-ratio: 16 / 9; 
+    object-fit: cover;
+    height: auto; 
+    border-radius: 5px; 
+    background-color: #343a40;
+}
+
+.media-element p {
+    margin-top: 0.5rem; 
+    font-size: 1rem; 
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer {
+    padding: 20px 0;
+    background-color: #343a40; 
+    color: white; 
+    text-align: center;
+    margin-top: 3rem; 
+}
+
+@media only screen and (max-width : 768px) {
+    nav {
+        flex-wrap: wrap;
+        position: relative;
+        width: 100%;
+        top: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul.hidden {
+        display: none;
+    }
+
+    .menu-icon {
+        display: flex;
+        align-items: center;
+    }
+
+    .contact {
+        padding: 50px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .container .contactInfo {
+        margin-bottom: 40px;
+    }
+
+    .container .contactInfo,
+    .contactform {
+        width: 100%;
+    }
+
+    .media-element {
+        padding: 0.5rem;
+        max-width: 100px; /* Atur lebar maksimum elemen media */
+        overflow: hidden; /* Sembunyikan teks yang melampaui batas */
+        text-overflow: ellipsis; /* Tampilkan tiga titik jika teks terlalu panjang */
+        white-space: nowrap; /* Jangan biarkan teks terputus ke baris baru */
+    }
+
+    .media-element p {
+        font-size: 0.8rem; /* Ukuran font lebih kecil untuk perangkat seluler */
+        margin-top: 0.25rem; /* Kurangi margin atas */
+    }
+
+    /* Jika Anda ingin mengatur ukuran gambar juga */
+    .media-element img {
+        max-width: 100%; /* Pastikan gambar tidak melampaui elemen */
+        height: auto; /* Pertahankan rasio aspek */
+    }
+    
+}

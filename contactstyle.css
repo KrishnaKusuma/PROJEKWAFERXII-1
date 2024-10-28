@@ -1,0 +1,254 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+nav {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+
+
+nav div img {
+    width: 150px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #191919;
+    font-weight: 600;
+    padding: 8px 0;
+    transition: all;
+    transition-duration: .3s;
+    border-bottom: 1px solid rgba(38, 126, 173, 0)(0, 0, 0, 0) ;
+}
+
+
+nav ul li a:hover {
+    color: rgb(38, 126, 173);
+    border-bottom: 1px solid rgb(38, 126, 173);
+}
+
+.menu-icon {
+    /* background-color: tomato; */
+    font-size: 25px;
+    display: none;
+}
+
+
+section {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(https://www.pdsvehicleinspections.com.au/wp-content/uploads/2015/09/contact_us_background.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.contact .content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .content h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.contact .content p {
+    font-weight: 500;
+    color: #fff;
+} 
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.container .contactInfo {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contactInfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container .contactInfo .box .icon {
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container .contactInfo .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    flex-direction: column;
+    font-weight: 500;
+}
+
+.container .contactInfo .box .text h3 {
+    color: #00bcd4;
+}
+
+.container .contactInfo .box .text p {
+    color: #ffffff;
+}
+
+.contactform {
+    width: 45%;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.8); /* Ubah nilai transparansi sesuai kebutuhan */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Opsional: Beri border radius untuk tampilan lebih halus */
+}
+
+
+.contactform h2 {
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contactform .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactform .inputBox input,
+.contactform .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+    background: transparent;
+}
+
+.contactform .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #333;
+}
+
+.contactform .inputBox input:focus ~ span,
+.contactform .inputBox input:valid ~ span,
+.contactform .inputBox textarea:focus ~ span,
+.contactform .inputBox textarea:valid ~ span {
+    transform: translateY(-20px);
+    color: #00bcd4;
+}
+
+.contactform .inputBox input[type="submit"] {
+    
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    transition: background 0.3s;
+    padding-top: 20px;
+}
+
+.contactform .inputBox input[type="submit"]:hover {
+    background: #0288d1;
+}
+
+footer {
+    padding: 20px 0;
+    background-color: #343a40; /* Dark gray footer */
+    color: white; 
+    text-align: center;
+    margin-top: 0; /* Add space before footer */
+}
+
+@media only screen and (max-width : 768px) {
+    nav {
+        flex-wrap: wrap;
+        position: relative;
+        width: 100%;
+        top: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul.hidden {
+        display: none;
+    }
+
+    .menu-icon {
+        display: flex;
+        align-items: center;
+    }
+
+    .contact {
+        padding: 50px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .container .contactInfo {
+        margin-bottom: 40px;
+    }
+
+    .container .contactInfo,
+    .contactform {
+        width: 100%;
+    }
+    
+}
